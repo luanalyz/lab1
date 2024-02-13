@@ -1,0 +1,33 @@
+/**
+ * Laboratório de Programação 2 - Lab 1
+ * 
+ * @author Luana Lyz Araujo Rocha - 123110697
+ */
+
+import java.util.Scanner;
+
+public class Media {
+        public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                String entrada = sc.nextLine();
+                String[] numeros = entrada.split(" ");
+                int n, soma, media;
+                soma = 0;
+
+                for(String item: numeros) {
+                        n = Integer.parseInt(item);
+                        soma += n;
+                }
+                
+                media = soma / numeros.length;
+
+                for(String item: numeros) {
+                        n = Integer.parseInt(item);
+                        if(n > media) {
+                                System.out.printf("%d%s", n, " ");
+                        }
+                }
+                System.out.print("\n");
+                sc.close();
+        }
+}
