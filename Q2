@@ -1,0 +1,21 @@
+/**
+ * Laboratório de Programação 2 - Lab 1
+ * 
+ * @author Luana Lyz Araujo Rocha - 123110697
+ */
+
+import java.util.Scanner;
+
+public class DobroTriplo {
+        public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+
+                int x;
+                x = sc.nextInt();
+                int y, z;
+                y = (x * 2);
+                z = (x * 3);
+                System.out.println("dobro: " + y + ", triplo: " + z);
+
+                sc.close();
+        }
