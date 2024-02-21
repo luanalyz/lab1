@@ -12,17 +12,35 @@ public class Maiores {
 
 		String numeros = sc.nextLine;
 		String[] lista = numeros.split(" ");
-		int soma;
-		int[] numerosLista = new int[lista.length];
+		int soma, primeiroMaior, segundoMaior, posicao, iterador;
+                int[] numerosLista = new int[lista.length];
+                iterador = -1;
+                posicao = 0;
+                for(int i = 0; i < numerosLista.length; i++) {
+                        numerosLista[i] = Integer.parseInt(lista[i]);
+                }
 
-		for(int i = 0; int < numerosLista; i++) {
-			numerosLista[i] = Integer.parseInt(lista[i]);
-		}
+                primeiroMaior = 0;
+                segundoMaior = 0;
 
-		bubbleSort(numerosLista);
+                for(int item: numerosLista) {
+                        iterador++;
+                        if (item > primeiroMaior) {
+                                primeiroMaior = item;
+                                posicao = iterador;
+                        }
+                }
 
-		soma = numerosLista[lista.length - 1] + numerosLista[lista.length - 2];
+                numerosLista[posicao] = 0;
 
-		System.out.println(soma);
-	}
+                for(int item:numerosLista) {
+                        if (item > segundoMaior) {
+                                segundoMaior = item;
+                        }
+                }
+
+                soma = primeiroMaior + segundoMaior;
+
+                System.out.println(soma);
+        }
 }
